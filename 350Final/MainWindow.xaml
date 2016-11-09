@@ -5,8 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_350Final"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="537.774" Width="498.814">
     <Grid>
-        
+        <GroupBox x:Name="groupBox" Header="IntroToProg Assigments" HorizontalAlignment="Left" Margin="10,5,0,0" VerticalAlignment="Top" Height="429" Width="467"/>
+        <Label x:Name="label" Content="Enter score for Assigment 1:" HorizontalAlignment="Left" Margin="16,35,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtAssign1" HorizontalAlignment="Left" Height="23" Margin="16,66,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="158" ToolTip="assignment 1" TabIndex="1"/>
+        <Label x:Name="label_Copy" Content="Enter score for Assigment 3:" HorizontalAlignment="Left" Margin="280,35,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtAssign3" HorizontalAlignment="Left" Height="23" Margin="280,66,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="158" ToolTip="assignment 3" TabIndex="3"/>
+        <Label x:Name="label_Copy1" Content="Enter score for Assigment 2:" HorizontalAlignment="Left" Margin="16,155,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtAssign2" HorizontalAlignment="Left" Height="23" Margin="16,186,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="158" ToolTip="assignment 2" TabIndex="2"/>
+        <Label x:Name="label_Copy2" Content="Enter score for Assigment 4:" HorizontalAlignment="Left" Margin="280,155,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtAssign4" HorizontalAlignment="Left" Height="23" Margin="280,186,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="158" ToolTip="assignment 4" TabIndex="4"/>
+        <Label x:Name="label1" Content="Assignment Scores:" HorizontalAlignment="Left" Margin="16,233,0,0" VerticalAlignment="Top"/>
+        <ListBox x:Name="lstGrades" HorizontalAlignment="Left" Height="161" Margin="16,264,0,0" VerticalAlignment="Top" Width="158"/>
+        <Button x:Name="btnDisplay" Content="Display Assignments" HorizontalAlignment="Left" Margin="280,264,0,0" VerticalAlignment="Top" Width="158" Click="btnDisplay_Click" Height="37" TabIndex="5"/>
+        <Button x:Name="btnClear" Content="Clear List" HorizontalAlignment="Left" Margin="280,340,0,0" VerticalAlignment="Top" Width="158" Height="37" TabIndex="6" Click="btnClear_Click"/>
+        <Label x:Name="label2" Content="Your Final Course Grade" HorizontalAlignment="Left" Margin="280,439,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnCalcLetterGrade" Content="Calculate Final Grade" HorizontalAlignment="Left" Margin="115,446,0,0" VerticalAlignment="Top" Width="118" Height="36" TabIndex="7" Click="btnCalcLetterGrade_Click"/>
+        <TextBox x:Name="txtLetterGrade" HorizontalAlignment="Left" Height="23" Margin="280,469,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TabIndex="8" IsReadOnly="True"/>
+
     </Grid>
 </Window>
