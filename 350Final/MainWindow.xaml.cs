@@ -57,7 +57,7 @@ namespace _350Final
         {
             if (isValid())
             {
-                var GradeObj = new IntroToProg(this);
+                IntroToProg.SetScores(txtAssign1, txtAssign2, txtAssign3, txtAssign4);
                 lstGrades.Items.Clear();
                 foreach (var grade in IntroToProg.Scores)
                 {
@@ -69,8 +69,8 @@ namespace _350Final
         private void btnCalcLetterGrade_Click(object sender, RoutedEventArgs e)
         {
             if (isValid()) {
-                var GradeObj = new IntroToProg(this);
-                txtLetterGrade.Text = GradeObj.LetterGrade;
+                IntroToProg.SetScores(txtAssign1, txtAssign2, txtAssign3, txtAssign4);
+                txtLetterGrade.Text = IntroToProg.LetterGrade;
             }
         }
 

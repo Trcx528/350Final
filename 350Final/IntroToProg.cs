@@ -3,15 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 
 namespace _350Final
 {
     class IntroToProg
     {
-        public int TotalScore;
+        public static int TotalScore;
         public static int[] Scores = new int[4];
 
-        public string LetterGrade
+        public static string LetterGrade
         {
             get
             {
@@ -30,31 +31,23 @@ namespace _350Final
             }
         }
 
-        public void SetScores(int a1, int a2, int a3, int a4)
+        public static void SetScores(TextBox a1, TextBox a2, TextBox a3, TextBox a4)
         {
-            Scores[0] = a1;
-            Scores[1] = a2;
-            Scores[2] = a3;
-            Scores[3] = a4;
+            // we really should be validating the text first to make sure that it is a number
+            // but this method is only called after validation so it shouldn't be a problem
+            Scores[0] = Convert.ToInt32(a1.Text);
+            Scores[1] = Convert.ToInt32(a2.Text);
+            Scores[2] = Convert.ToInt32(a3.Text);
+            Scores[3] = Convert.ToInt32(a4.Text);
         }
 
-        public void SetTotal()
+        public static void SetTotal()
         {
-            this.TotalScore = 0;
+            TotalScore = 0;
             foreach (var i in Scores)
             {
-                this.TotalScore += i;
+                TotalScore += i;
             }
-        }
-
-
-        public IntroToProg(MainWindow Window)
-        {
-            var a1 = Convert.ToInt32(Window.txtAssign1.Text);
-            var a2 = Convert.ToInt32(Window.txtAssign2.Text);
-            var a3 = Convert.ToInt32(Window.txtAssign3.Text);
-            var a4 = Convert.ToInt32(Window.txtAssign4.Text);
-            this.SetScores(a1, a2, a3, a4);
         }
     }
 }
